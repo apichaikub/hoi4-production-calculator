@@ -31,7 +31,7 @@ export default function Form() {
   useEffect(() => {
     const subscription = watch((value, { name, type }) => {
       if(name === "requiredUnit") {
-        if(getValues('currentProducedUnit')) trigger("currentProducedUnit")
+        if(getValues('currentProducedUnit') && getValues('currentProducedUnit') != 0) trigger("currentProducedUnit")
       }
       if(name === "currentProducedUnit") {
         if(getValues('requiredUnit')) trigger("requiredUnit")
