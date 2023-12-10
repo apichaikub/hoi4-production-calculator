@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/hoi4-production-calculator/static/js/main.827c8a72.js",
+    "main.js": "/hoi4-production-calculator/static/js/main.85a72fb0.js",
     "static/media/Bundesarchiv_Bild_146-1985-100-33,_Rüstungsproduktion,_Sturmgeschütz_III.jpg": "/hoi4-production-calculator/static/media/Bundesarchiv_Bild_146-1985-100-33,_Rüstungsproduktion,_Sturmgeschütz_III.9c34c7469884a64a1cbf.jpg",
     "static/media/arms_land_artillery_howitzer_1.webp": "/hoi4-production-calculator/static/media/arms_land_artillery_howitzer_1.4f679405a884020a8eb7.webp",
     "static/media/jpg": "/hoi4-production-calculator/static/media/55d01608977f931935e043cecbcdef6b.33b94ce148d474178a88.jpg",
     "static/media/Military_factories.png": "/hoi4-production-calculator/static/media/Military_factories.ac5d7b252124297514e2.png",
     "static/media/Production_efficiency.png": "/hoi4-production-calculator/static/media/Production_efficiency.a9abd4690906dd926578.png",
     "index.html": "/hoi4-production-calculator/index.html",
-    "main.827c8a72.js.map": "/hoi4-production-calculator/static/js/main.827c8a72.js.map"
+    "main.85a72fb0.js.map": "/hoi4-production-calculator/static/js/main.85a72fb0.js.map"
   },
   "entrypoints": [
-    "static/js/main.827c8a72.js"
+    "static/js/main.85a72fb0.js"
   ]
 }
