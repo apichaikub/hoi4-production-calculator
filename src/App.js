@@ -44,7 +44,7 @@ export default function App() {
           <h4>Objective</h4>
           <p>I just need to know how long it takes to produce 8,000 fighters and 2,000 medium tanks before invading to neighbor.</p>
           <p>Investing real resources and time to see how long it takes does not seem effective and not accurate. the estimated days tend to decrease gradually because production efficiency growth changes each day.</p>
-          <p>The app shows estimated days to produce, accurate 99% (+-3d). If you play x1 - x3 game speed, I hope this could help. Enjoy!!!</p>
+          <p>The tool shows estimated days to produce, accurate 99% (+-3d). I hope this could help. Enjoy!!!</p>
         </Box>
 
         <Box style={{ marginTop: 30, marginBottom: 30, }}>
@@ -66,7 +66,7 @@ export default function App() {
         </Box>
 
         <Box style={{ marginTop: 30, marginBottom: 30, }}>
-          <h4>Issues & Bugs Report</h4>
+          <h4>Bugs Report</h4>
           <a href="https://github.com/apichaikub/hoi4-production-calculator/issues">https://github.com/apichaikub/hoi4-production-calculator/issues</a>
         </Box>
 
@@ -76,7 +76,7 @@ export default function App() {
         </Box>
 
         <Box style={{ marginTop: 30, marginBottom: 30, }}>
-          <h4>Other Apps</h4>
+          <h4>Other Tools</h4>
           <ul>
             <li>
               <p>
@@ -85,18 +85,50 @@ export default function App() {
             </li>
             <li>
               <p>
-                <a href="https://kailniris.github.io/hoi4-combat-width-calculator/">https://kailniris.github.io/hoi4-combat-width-calculator/</a>
+                <a href="https://kailniris.github.io/hoi4-combat-width-calculator">https://kailniris.github.io/hoi4-combat-width-calculator</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="https://docs.google.com/spreadsheets/d/1sZWOvSWzKzUKrEhjQoefmmdXzD1e5UiHHpCyCfTc-1g/edit#gid=1790104042">Military factories allocation - Google Sheet</a>
+              </p>
+            </li>
+          </ul>
+        </Box>
+
+        <Box style={{ marginTop: 30 }}>
+          <h4>Reference</h4>
+          <ul>
+            <li>
+              <p>
+                <a href="https://hoi4.paradoxwikis.com/Production">https://hoi4.paradoxwikis.com/Production</a>
               </p>
             </li>
           </ul>
         </Box>
 
         <Box style={{ marginTop: 30, marginBottom: 30, }}>
-          <h4>Reference</h4>
+          <h4>Credit</h4>
           <ul>
             <li>
               <p>
-                <a href="https://hoi4.paradoxwikis.com/Production">https://hoi4.paradoxwikis.com/Production</a>
+                <a href="https://www.junobeach.org/canada-in-wwii/articles/artillery/25-pounder-field-gunhowitzer">
+                  https://www.junobeach.org/canada-in-wwii/articles/artillery/25-pounder-field-gunhowitzer
+                </a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="https://prospect.org/health/manufacturing-s-future-used-up">
+                  https://prospect.org/health/manufacturing-s-future-used-up
+                </a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="https://en.wikipedia.org/wiki/German_armored_fighting_vehicle_production_during_World_War_II">
+                  https://en.wikipedia.org/wiki/German_armored_fighting_vehicle_production_during_World_War_II
+                </a>
               </p>
             </li>
           </ul>
