@@ -42,9 +42,7 @@ export default function App() {
 
         <Box style={{ marginTop: 30 }}>
           <h4>Objective</h4>
-          <p>I just need to know how long it takes to produce 8,000 fighters and 2,000 medium tanks before invading to neighbor.</p>
-          <p>Investing real resources and time to see how long it takes does not seem effective and not accurate. the estimated days tend to decrease gradually because production efficiency growth changes each day.</p>
-          <p>The tool shows estimated days to produce, accurate 99% (+-3d). I hope this could help. Enjoy!!!</p>
+          <p>Estimate days to producing units</p>
         </Box>
 
         <Box style={{ marginTop: 30, marginBottom: 30, }}>
@@ -61,6 +59,9 @@ export default function App() {
             </li>
             <li>
               <p>Increasing the production efficiency cap helps to produce units more than production output modifiers.</p>
+            </li>
+            <li>
+              <p>accurate 99% (+-3 days)</p>
             </li>
           </ul>
         </Box>
