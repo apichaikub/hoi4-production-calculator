@@ -115,9 +115,7 @@ const useFormCalc = () => {
       productTotal_xAxisData.push(Math.abs((Number(data.currentProducedUnit) - product_sum_current)));
 
       pfToday_xAxisLabels.push(day);
-      pfToday_xAxisData.push(
-        prod_eff_growth_today < 0.001 ? null : prod_eff_growth_today * 100
-      );
+      pfToday_xAxisData.push(prod_eff_growth_today * 100);
 
       pfTotal_xAxisLabels.push(day);
       pfTotal_xAxisData.push(prod_eff_sum_current > 1 ? 100 : prod_eff_sum_current * 100);
