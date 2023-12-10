@@ -24,14 +24,14 @@ const useFormCalc = () => {
       axisData: [],
     },
   });
-  const { handleSubmit, reset, getValues, trigger, watch, control, formState } = useForm({
+  const { handleSubmit, reset, getValues, trigger, watch, setValue, control, formState } = useForm({
     defaultValues: {
-      milFactory: "1",
-      productionOutputModified: "",
+      milFactory: "5",
+      productionOutputModified: "-15",
       productionEfficiency: "10",
       productionEfficiencyCap: "50",
-      requiredUnit: "",
-      productionCost: "",
+      requiredUnit: "420",
+      productionCost: "3.5",
       currentProducedUnit: "0",
       // milFactory: "64",
       // productionOutputModified: "100",
@@ -165,14 +165,28 @@ const useFormCalc = () => {
 
   const handleReset = () => {
     reset();
+    setValue("milFactory", "");
+    setValue("productionOutputModified", "");
+    setValue("productionEfficiency", "");
+    setValue("productionEfficiencyCap", "");
+    setValue("requiredUnit", "");
+    setValue("productionCost", "");
+    setValue("currentProducedUnit", "");
     setResults(null);
     setCharts(null);
   };
+
+  const handleSetDefaults = () => {
+    reset();
+    setResults(null);
+    setCharts(null);
+  }
 
   return {
     handleSubmit,
     onSubmit,
     handleReset,
+    handleSetDefaults,
     getValues,
     trigger,
     watch,

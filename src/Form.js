@@ -13,12 +13,14 @@ import Military_factories from "./icons/Military_factories.png"
 import Production_Cost from "./icons/Production_Cost.png"
 import Production_efficiency_cap from "./icons/Production_efficiency_cap.png"
 import Production_efficiency from "./icons/Production_efficiency.png"
+import Logistic_stored from "./icons/Logistic_stored.png"
 
 export default function Form() {
   const {
     handleSubmit,
     onSubmit,
     handleReset,
+    handleSetDefaults,
     getValues,
     trigger,
     watch,
@@ -32,13 +34,14 @@ export default function Form() {
     const subscription = watch((value, { name, type }) => {
       if(name === "requiredUnit") {
         if(getValues('currentProducedUnit') && getValues('currentProducedUnit') != 0) trigger("currentProducedUnit")
+        if(errors?.requiredUnit?.type === "invalidUnit") trigger("requiredUnit")
       }
       if(name === "currentProducedUnit") {
         if(getValues('requiredUnit')) trigger("requiredUnit")
       }
     })
     return () => subscription.unsubscribe()
-  }, [watch])
+  }, [watch, errors])
 
   return (
     <>
@@ -48,7 +51,7 @@ export default function Form() {
         style={{ paddingBottom: 15 }}
       >
         <Box component="fieldset">
-          <legend>Producing</legend>
+          <legend>Production</legend>
           <Controller
             name="requiredUnit"
             control={control}
@@ -63,7 +66,7 @@ export default function Form() {
             }}
             render={({ field }) => (
               <TextField
-                label="Required Unit"
+                label="Units"
                 type="number"
                 fullWidth={true}
                 margin="normal"
@@ -74,7 +77,7 @@ export default function Form() {
                 helperText={
                   errors?.requiredUnit?.type === "invalidUnit" &&
                   getValues("currentProducedUnit") &&
-                  'value needs to be greater than "Current Produced Units"'
+                  'value needs to be greater than "Stored"'
                 }            
                 {...field}
                 onWheel={(e) => e.target.blur()}
@@ -88,10 +91,10 @@ export default function Form() {
             render={({ field }) => (
               <TextField
                 label={
-                  <div style={{ position: "relative", top: 0 }}>
-                    <span>Production Cost</span>
+                  <div style={{ position: "relative", top: -3 }}>
+                    <span>Cost</span>
                     <img
-                      style={{ position: "relative", top: 5, marginLeft: 5 }}
+                      style={{ position: "relative", top: 5, marginLeft: 5, width: 22 }}
                       src={Production_Cost}
                     />
                   </div>
@@ -122,7 +125,15 @@ export default function Form() {
             }}
             render={({ field }) => (
               <TextField
-                label="Current Produced Unit"
+                label={
+                  <div style={{ position: "relative", top: -1 }}>
+                    <span>Stored</span>
+                    <img
+                      style={{ position: "relative", top: 3, marginLeft: 5, width: 20 }}
+                      src={Logistic_stored}
+                    />
+                  </div>
+                }
                 type="number"
                 fullWidth={true}
                 margin="normal"
@@ -133,7 +144,7 @@ export default function Form() {
                 helperText={
                   errors?.currentProducedUnit?.type === "invalidUnit" &&
                   getValues("requiredUnit") &&
-                  'value needs to be less than "Required Unit"'
+                  'value needs to be less than "Units"'
                 }
                 {...field}
                 onWheel={(e) => e.target.blur()}
@@ -142,7 +153,7 @@ export default function Form() {
           />
         </Box>
         <Box component="fieldset" style={{ marginTop: 15 }}>
-          <legend>Production</legend>
+          <legend>Industry</legend>
           <Controller
             name="productionOutputModified"
             control={control}
@@ -283,7 +294,10 @@ export default function Form() {
         )}
         <Stack spacing={2} direction="row" style={{ marginTop: 30 }}>
           <Button variant="outlined" type="reset">
-            Reset
+            Clear
+          </Button>
+          <Button variant="outlined" type="button" onClick={handleSetDefaults}>
+            Set Defaults
           </Button>
           <Button variant="contained" type="submit">
             Show Result

@@ -131,6 +131,13 @@ export default function App() {
                 </a>
               </p>
             </li>
+            <li>
+              <p>
+                <a href="https://hoi4.paradoxwikis.com/Category:Icons">
+                  https://hoi4.paradoxwikis.com/Category:Icons
+                </a>
+              </p>
+            </li>
           </ul>
         </Box>
       </Container>
