@@ -94,6 +94,11 @@ export default function App() {
                 <a href="https://docs.google.com/spreadsheets/d/1sZWOvSWzKzUKrEhjQoefmmdXzD1e5UiHHpCyCfTc-1g/edit#gid=1790104042">Military factories allocation - Google Sheet</a>
               </p>
             </li>
+            <li>
+              <p>
+                <a href="https://docs.google.com/spreadsheets/d/1pP1kPclKlFzp2-nESbpZL82Q_MsxPojs4eBnVFTUUqU/edit#gid=0">Estimate MIC output - Google Sheet</a>
+              </p>
+            </li>
           </ul>
         </Box>
 
